@@ -1,0 +1,32 @@
+{
+  "name": "UberTagger",
+  "version": "0.0.1",
+  "description": "An annotation app",
+  "private": true,
+  "dependencies": {
+    "d3": "~3.4.11",
+    "jquery": "1.9.1",
+    "jquery-migrate": "1.1.0",
+    "w2ui": "~1.4.1",
+    "fontawesome": "~4.1.0",
+    "ace-builds": "~1.1.6",
+    "threejs": "*",
+    "cytoscape": "~2.2.12",
+    "bootstrap": "~3.2.0",
+    "jqueryui": "~1.11.1",
+    "webgl-heatmap": "*",
+    "relayfoods-jquery.sparkline": "~2.1.4",
+    "masonry": "~3.1.5",
+    "jquery.shapeshift": "~2.0.0",
+    "packery": "~1.2.4",
+    "slickgrid": "~2.1.0",
+    "At.js": "~0.5.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

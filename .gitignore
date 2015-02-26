@@ -1,0 +1,6 @@
+bower_components
+node_modules
+nodebob
+build
+release
+.DS_Store
