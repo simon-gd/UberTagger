@@ -5,7 +5,7 @@ UberTagger is an desktop application for exploratory analysis of sequntial data 
 For more infomation see these publications:
 
 
-![UberTagger](https://https://github.com/sbreslav/UberTagger/raw/master/doc/screenshot.png)
+![UberTagger](https://github.com/sbreslav/UberTagger/raw/master/doc/screenshot.png)
 
 
 ## Building Steps (Windows)
