@@ -297,7 +297,7 @@ $(function(){
   
   $("#openDir").change(function(evt) {
     try{
-      loadDataset($(this).val());        
+      loadDataset("loadComments");        
     }catch(err){
       console.error(err);
     }

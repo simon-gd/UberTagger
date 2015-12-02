@@ -26,7 +26,7 @@
 // w2ui
 // $
 
-var async = requireNode('async');
+var async = require('async');
 
 //var mypath = require('path');
 var self = null;
@@ -300,7 +300,7 @@ grid.prototype.init = function(dataStore, parentLayout, parentPanel, datasetPath
 	 	this.searches = dataStore.searches;
 	 	this.records = dataStore.records;
 
-
+	 	/*
 	 	this.menu = new gui.Menu();
 	 	this.menu.append(new gui.MenuItem({label: "Add Selected Columns to Dashboard", click: function() {
 										    	self.AddColsToDashboard();
@@ -314,7 +314,7 @@ grid.prototype.init = function(dataStore, parentLayout, parentPanel, datasetPath
 		this.menu.append(new gui.MenuItem({ label: 'Remove Selecte Rows from Dashboard', click: function() {
 										    	self.RemoveRowsFromDashboard();
 										  	}}));
-
+		*/
 		for (var i = 0; i < this.columns.length; i++) {
 		  this.columns[i].header = {
 		    menu: {
@@ -403,103 +403,7 @@ grid.prototype.init = function(dataStore, parentLayout, parentPanel, datasetPath
 	      self.grid.render();
 	    });
 
-	    //this.grid.onCellChange.subscribe(function (e, args) {
-			//dataView.updateItem(args.item.id, args.item);
-		//    console.log("grid.onCellChange", e, args);
-		//});
-
-		//this.grid.onAddNewRow.subscribe(function (e, args) {
-		//    console.log("grid.onAddNewRow", e, args);
-		//});
-		/*
-		this.grid.onMouseEnter.subscribe(function(e) {
-				var cell = self.grid.getCellFromEvent(e);
-
-				self.grid.setSelectedRows([cell.row]);
-                e.preventDefault();
-			});
-
-		this.grid.onMouseLeave.subscribe(function(e) {
-				self.grid.setSelectedRows([]);
-                e.preventDefault();
-			});
-*/
-		//this.grid.onContextMenu.subscribe(function (e) {
-	     // e.preventDefault();
-	      //var cell = self.grid.getCellFromEvent(e);
-	     
-	      // $("body").one("click", function () {
-	     //   $("#contextMenu").hide();
-	     // });
-	     // $("#contextMenu")
-	     //     .data("cell", cell)
-	     //     .css("top", e.pageY)
-	     //     .css("left", e.pageX)
-	     //     .show();
-
-	     // $("body").one("click", function () {
-	     //   $("#contextMenu").hide();
-	     // });
-	    //});
-		//this.grid.onSelectedRowsChanged.subscribe(function (e, args) {
-			//console.log("grid.onSelectedRowsChanged", e, args);
-			//var selectionModel = self.grid.getSelectionModel();
-			//var ranges = selectionModel.getSelectedRanges();
-			//console.log("grid.onSelectedRowsChanged ranges: ", ranges);
-	        /*
-	            selectedRowIds = [];
-                var rows = self.grid.getSelectedRows();
-                for (var i = 0, l = rows.length; i < l; i++) {
-                    var item = self.dataStore.dataView.getItem(rows[i]);
-                    if (item) selectedRowIds.push(item.id);
-                }
-                console.log("grid.onSelectedRowsChanged: ", selectedRowIds);
-			self.dataStore.changeSelection(self.name, "row-select", selectedRowIds);
-			*/
-			//e.preventDefault();
-        	//e.stopPropagation();      
-
-			//self.menu.popup(e.clientX, e.clientY);
-		//});
-
-        //this.grid.onActiveCellChanged.subscribe(function(e, args){
-        	//console.log("onActiveCellChanged", e, args);
-
-        	//e.preventDefault();
-        	//e.stopPropagation();      
-
-			//self.menu.popup(e.clientX, e.clientY);
-        //});
-
-        //this.grid.onActiveCellPositionChanged.subscribe(function(e, args){
-        	//console.log("onActiveCellPositionChanged", e, args);
-        //});
-
-
-		//this.grid.onDragEnd.subscribe(function(e, args){
-			//e.preventDefault();
-        	//e.stopPropagation();      
-			
-			//self.menu.popup(e.clientX, e.clientY);
-		//});
-		
-		//this.grid.onClick.subscribe(function (e, args) {
-			
-			//e.preventDefault();
-        	//e.stopPropagation();      
-			
-			//self.menu.popup(e.clientX, e.clientY);
-			//console.log("grid.onClick", e, args);
-			//var selectionModel = self.grid.getSelectionModel();
-			//var ranges = selectionModel.getSelectedRanges();
-			//console.log("grid.onSelectedRowsChanged ranges: ", ranges);
-			//var item = self.dataStore.dataView.getItem(args.cell);
-
-			//self.dataStore.changeSelection(self.name, "cell-click", args.cell);
-		    
-		//});
-
-
+	  
 		// wire up model events to drive the grid
 		this.dataStore.dataView.onRowCountChanged.subscribe(function (e, args) {
 		    //console.log("dataView.onRowCountChanged", e, args);
